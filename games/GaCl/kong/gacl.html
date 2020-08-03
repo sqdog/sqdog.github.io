@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Galactic Clicker</title>
+
+	<!-- Load the Kongregate Javascript API -->
+	<script type="text/javascript" src="http://www.kongregate.com/javascripts/kongregate_api.js"></script>
+
+	<!-- Give the shell no border/scroll bars and match the Kongregate background color.
+		 If your game needs scrollbars, you might need to modify these styles -->
+	<style type="text/css">
+		html{border: none; overflow: hidden; background-color: #333; height: 100%;}
+		body{border: none; background-color: #333;margin:0; padding:0;}
+		@font-face {
+			font-family: 'leaguegothic-regular-webfont';
+			src: url('fonts/leaguegothic-regular-webfont.ttf');
+		}
+	</style>
+</head>
+
+<body>
+<script type="text/javascript">
+	var kongregate = null;
+
+	// Called when the API is finished loading
+	function onLoadCompleted(){
+		// Get a global reference to the kongregate API. This way, pages included in the
+		// iframe can access it by using "parent.kongregate"
+		kongregate = kongregateAPI.getAPI();
+
+		// Embed the game into the "contentdiv" div, which is defined below. You can also
+		// manually create your own iframe, this function is just for convenience.
+		// This example also passes along the kongregate user_id and game_auth_token so
+		// that the page can use them for authentication.
+//		var params = "kongregate_user_id=" + kongregate.services.getUserId() +
+//				"&kongregate_game_auth_token=" + kongregate.services.getGameAuthToken() +
+//				"&random=" + (Math.random() * 1000000000);
+//		kongregateAPI.embedFrame("game.html?" + params);
+	}
+
+	// Begin the process of loading the Kongregate API:
+	kongregateAPI.loadAPI(onLoadCompleted);
+</script>
+
+<!-- The div that the game will be placed into. Make sure to set the width and height properly -->
+<div id="contentdiv" style="top:0px; left:0px; width:1024px; height:576px; borders:none;">
+	<canvas id="main_canvas">No canvas support</canvas>
+
+    <script type="text/javascript" src="script08/util.js"></script>
+    <script type="text/javascript" src="script08/main.js"></script>
+    <script type="text/javascript" src="script08/input.js"></script>
+
+    <script type="text/javascript" src="script08/hld.js"></script>
+
+    <script type="text/javascript" src="script08/cntl_group.js"></script>
+    <script type="text/javascript" src="script08/cntl_button.js"></script>
+
+	<script type="text/javascript" src="script08/tables.js"></script>
+	<script type="text/javascript" src="script08/gacl.js"></script>
+</div>
+</body>
+</html>
