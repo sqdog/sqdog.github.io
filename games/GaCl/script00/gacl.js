@@ -159,11 +159,6 @@ var CGaCl = Class.extend({
 				}
 			}
 		}
-		// Store the total events in the kongregate api
-		if (kongregate != null)
-		{
-			kongregate.stats.submit("max_events_purchased", this.m_totalEventsPurchased);
-		}
 		// Rebuild the ui
 		for (var i = 0; i < c_shipTable.length; ++i)
 		{
@@ -2034,11 +2029,6 @@ var CGaCl = Class.extend({
 					this.m_curStage = c_eventTable[i][0];
 					break;
 				}
-			}
-			// Store the total events in the kongregate api
-			if (kongregate != null)
-			{
-				kongregate.stats.submit("max_events_purchased", this.m_totalEventsPurchased);
 			}
 			this.updateEventButtonText();
 			this.saveToLocalStorage();
