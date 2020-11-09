@@ -1,86 +1,102 @@
-/*
-Copyright 2015, 2019, 2020 Google LLC. All Rights Reserved.
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
- http://www.apache.org/licenses/LICENSE-2.0
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
-*/
+// Use a cacheName for cache versioning
+var cacheName = 'v1:static';
 
-// Incrementing OFFLINE_VERSION will kick off the install event and force
-// previously cached resources to be updated from the network.
-const OFFLINE_VERSION = 1;
-const CACHE_NAME = "offline";
-// Customize this with a different URL if needed.
-const OFFLINE_URL = "offline.html";
-
-self.addEventListener("install", (event) => {
-  event.waitUntil(
-    (async () => {
-      const cache = await caches.open(CACHE_NAME);
-      // Setting {cache: 'reload'} in the new request will ensure that the
-      // response isn't fulfilled from the HTTP cache; i.e., it will be from
-      // the network.
-      await cache.add(new Request(OFFLINE_URL, { cache: "reload" }));
-    })()
-  );
-  // Force the waiting service worker to become the active service worker.
-  self.skipWaiting();
-});
-
-self.addEventListener("activate", (event) => {
-  event.waitUntil(
-    (async () => {
-      // Enable navigation preload if it's supported.
-      // See https://developers.google.com/web/updates/2017/02/navigation-preload
-      if ("navigationPreload" in self.registration) {
-        await self.registration.navigationPreload.enable();
-      }
-    })()
-  );
-
-  // Tell the active service worker to take control of the page immediately.
-  self.clients.claim();
-});
-
-self.addEventListener("fetch", (event) => {
-  // We only want to call event.respondWith() if this is a navigation request
-  // for an HTML page.
-  if (event.request.mode === "navigate") {
-    event.respondWith(
-      (async () => {
-        try {
-          // First, try to use the navigation preload response if it's supported.
-          const preloadResponse = await event.preloadResponse;
-          if (preloadResponse) {
-            return preloadResponse;
-          }
-
-          // Always try the network first.
-          const networkResponse = await fetch(event.request);
-          return networkResponse;
-        } catch (error) {
-          // catch is only triggered if an exception is thrown, which is likely
-          // due to a network error.
-          // If fetch() returns a valid HTTP response with a response code in
-          // the 4xx or 5xx range, the catch() will NOT be called.
-          console.log("Fetch failed; returning offline page instead.", error);
-
-          const cache = await caches.open(CACHE_NAME);
-          const cachedResponse = await cache.match(OFFLINE_URL);
-          return cachedResponse;
-        }
-      })()
+// During the installation phase, you'll usually want to cache static assets.
+self.addEventListener('install', function(e) {
+    // Once the service worker is installed, go ahead and fetch the resources to make this work offline.
+    e.waitUntil(
+        caches.open(cacheName).then(function(cache) {
+            return cache.addAll([
+              './art/ui/settings/sound_on_hilite.png',
+              './art/ui/settings/sound_off.png',
+              './art/ui/settings/Settings_button.png',
+              './art/ui/settings/sound_off_hilite.png',
+              './art/ui/settings/sound_on.png',
+              './art/ui/map_editor/td_maps_hilite.png',
+              './art/ui/map_editor/erase_tile_hilite.png',
+              './art/ui/map_editor/td_maps.png',
+              './art/ui/map_editor/save_hilite.png',
+              './art/ui/map_editor/erase_tile.png',
+              './art/ui/map_editor/save.png',
+              './art/ui/pieces/piece_spawn_hilite.png',
+              './art/ui/pieces/piece_tile.png',
+              './art/ui/pieces/piece_socket_hilite.png',
+              './art/ui/pieces/piece_curve_2_hilite.png',
+              './art/ui/pieces/piece_base_hilite.png',
+              './art/ui/pieces/piece_curve_2.png',
+              './art/ui/pieces/piece_curve_3.png',
+              './art/ui/pieces/piece_curve_1.png',
+              './art/ui/pieces/piece_curve_3_hilite.png',
+              './art/ui/pieces/piece_spawn.png',
+              './art/ui/pieces/piece_base.png',
+              './art/ui/pieces/piece_curve_1_hilite.png',
+              './art/ui/pieces/piece_tile_hilite.png',
+              './art/ui/pieces/piece_socket.png',
+              './art/ui/titles/sds_logo_black.png',
+              './art/ui/titles/REclaimer.png',
+              './art/ui/titles/sds_logo_edge.png',
+              './art/ui/titles/sds_logo.png',
+              './art/ui/mesh_editor/scale.png',
+              './art/ui/mesh_editor/profile_hilite.png',
+              './art/ui/mesh_editor/scale_hilite.png',
+              './art/ui/mesh_editor/mirror_none_hilite.png',
+              './art/ui/mesh_editor/mirror_y_hilite.png',
+              './art/ui/mesh_editor/cross_hilite.png',
+              './art/ui/mesh_editor/mirror_xy.png',
+              './art/ui/mesh_editor/meshes_hilite.png',
+              './art/ui/mesh_editor/rotate.png',
+              './art/ui/mesh_editor/mirror_xy_hilite.png',
+              './art/ui/mesh_editor/pre_translate.png',
+              './art/ui/mesh_editor/rotate_hilite.png',
+              './art/ui/mesh_editor/mirror_x.png',
+              './art/ui/mesh_editor/node.png',
+              './art/ui/mesh_editor/mirror_y.png',
+              './art/ui/mesh_editor/mirror_x_hilite.png',
+              './art/ui/mesh_editor/cross.png',
+              './art/ui/mesh_editor/profile.png',
+              './art/ui/mesh_editor/meshes.png',
+              './art/ui/mesh_editor/node_hilite.png',
+              './art/ui/mesh_editor/mirror_none.png',
+              './art/ui/mesh_editor/pre_translate_hilite.png',
+              './art/ui/towers/shockwave.png',
+              './art/ui/towers/freeze.png',
+              './art/ui/towers/laser.png',
+              './art/ui/towers/electric.png',
+              './art/ui/towers/flame.png',
+              './art/ui/towers/cannon.png',
+              './art/ui/towers/flak.png',
+              './art/ui/towers/acid.png',
+              './art/ui/tower_actions/check.png',
+              './art/ui/tower_actions/cancel.png',
+              './art/ui/tower_actions/upgrade.png',
+              './art/ui/tower_actions/trash.png',
+              './art/textures/particle_solid_01.png',
+              './art/textures/grid.png',
+              './art/textures/particle_smoke_01.png',
+              './art/textures/back_grid.png',
+              './art/textures/spacebox_03.png',
+              './art/textures/spacebox_02.png',
+              './art/textures/shadow.png',
+              './art/app_icons/icon-192.png',
+              './art/app_icons/icon-512.png'
+            ]).then(function() {
+                self.skipWaiting();
+            });
+        })
     );
-  }
+});
 
-  // If our if() condition is false, then this fetch handler won't intercept the
-  // request. If there are any other fetch handlers registered, they will get a
-  // chance to call event.respondWith(). If no fetch handlers call
-  // event.respondWith(), the request will be handled by the browser as if there
-  // were no service worker involvement.
+// when the browser fetches a URL…
+self.addEventListener('fetch', function(event) {
+    // … either respond with the cached object or go ahead and fetch the actual URL
+    event.respondWith(
+        caches.match(event.request).then(function(response) {
+            if (response) {
+                // retrieve from cache
+                return response;
+            }
+            // fetch as normal
+            return fetch(event.request);
+        })
+    );
 });
