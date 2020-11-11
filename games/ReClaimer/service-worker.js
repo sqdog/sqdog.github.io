@@ -79,7 +79,8 @@ self.addEventListener('install', function(e) {
               './art/textures/spacebox_02.png',
               './art/textures/shadow.png',
               './art/app_icons/icon-192.png',
-              './art/app_icons/icon-512.png'
+              './art/app_icons/icon-512.png',
+              './ExtBuild_app.html'
             ]).then(function() {
                 self.skipWaiting();
             });
