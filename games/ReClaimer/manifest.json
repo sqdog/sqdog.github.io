@@ -3,17 +3,17 @@
   "name": "REclaimer Tower Defense",
   "icons": [
     {
-        "src": "/art/app_icons/icon-192.png",
+        "src": "./art/app_icons/icon-192.png",
         "sizes": "192x192",
         "type": "image/png"
     },
     {
-      "src": "/art/app_icons/icon-512.png",
+      "src": "./art/app_icons/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
   ],
-  "start_url": "/ExtBuild_app.html",
+  "start_url": "./ExtBuild_app.html",
   "background_color": "#e05a47",
   "theme_color": "#e05a47",
   "display": "standalone",
