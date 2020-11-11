@@ -74,6 +74,7 @@ self.addEventListener('install', function(e) {
               './art/textures/grid.png',
               './art/textures/particle_smoke_01.png',
               './art/textures/back_grid.png',
+              './art/textures/skybox_09.png',
               './art/textures/spacebox_03.png',
               './art/textures/spacebox_02.png',
               './art/textures/shadow.png',

@@ -13,8 +13,9 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/?utm_source=homescreen",
+  "start_url": "/ExtBuild_link.html",
   "background_color": "#e05a47",
   "theme_color": "#e05a47",
-  "display": "standalone"
+  "display": "standalone",
+  "orientation": "landscape"
 }
