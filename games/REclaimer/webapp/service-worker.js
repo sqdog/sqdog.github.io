@@ -1,5 +1,5 @@
 // Use a cacheName for cache versioning
-var cacheName = 'v1:static';
+var cacheName = 'v2:static';
 
 // During the installation phase, you'll usually want to cache static assets.
 self.addEventListener('install', function(e) {
@@ -80,7 +80,7 @@ self.addEventListener('install', function(e) {
               './art/textures/shadow.png',
               './art/app_icons/icon-192.png',
               './art/app_icons/icon-512.png',
-              './ExtBuild_app.html'
+              './index.html'
             ]).then(function() {
                 self.skipWaiting();
             });
