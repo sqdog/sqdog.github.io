@@ -1,104 +1,122 @@
-// Use a cacheName for cache versioning
-var cacheName = 'v2:static';
+// Service-work cache name
+var cacheName = '2021_03_03__09_51:static';
 
-// During the installation phase, you'll usually want to cache static assets.
+// Cache assets on install
 self.addEventListener('install', function(e) {
-    // Once the service worker is installed, go ahead and fetch the resources to make this work offline.
-    e.waitUntil(
-        caches.open(cacheName).then(function(cache) {
-            return cache.addAll([
-              './art/ui/settings/sound_on_hilite.png',
-              './art/ui/settings/sound_off.png',
-              './art/ui/settings/Settings_button.png',
-              './art/ui/settings/sound_off_hilite.png',
-              './art/ui/settings/sound_on.png',
-              './art/ui/map_editor/td_maps_hilite.png',
-              './art/ui/map_editor/erase_tile_hilite.png',
-              './art/ui/map_editor/td_maps.png',
-              './art/ui/map_editor/save_hilite.png',
-              './art/ui/map_editor/erase_tile.png',
-              './art/ui/map_editor/save.png',
-              './art/ui/pieces/piece_spawn_hilite.png',
-              './art/ui/pieces/piece_tile.png',
-              './art/ui/pieces/piece_socket_hilite.png',
-              './art/ui/pieces/piece_curve_2_hilite.png',
-              './art/ui/pieces/piece_base_hilite.png',
-              './art/ui/pieces/piece_curve_2.png',
-              './art/ui/pieces/piece_curve_3.png',
-              './art/ui/pieces/piece_curve_1.png',
-              './art/ui/pieces/piece_curve_3_hilite.png',
-              './art/ui/pieces/piece_spawn.png',
-              './art/ui/pieces/piece_base.png',
-              './art/ui/pieces/piece_curve_1_hilite.png',
-              './art/ui/pieces/piece_tile_hilite.png',
-              './art/ui/pieces/piece_socket.png',
-              './art/ui/titles/sds_logo_black.png',
-              './art/ui/titles/REclaimer.png',
-              './art/ui/titles/sds_logo_edge.png',
-              './art/ui/titles/sds_logo.png',
-              './art/ui/mesh_editor/scale.png',
-              './art/ui/mesh_editor/profile_hilite.png',
-              './art/ui/mesh_editor/scale_hilite.png',
-              './art/ui/mesh_editor/mirror_none_hilite.png',
-              './art/ui/mesh_editor/mirror_y_hilite.png',
-              './art/ui/mesh_editor/cross_hilite.png',
-              './art/ui/mesh_editor/mirror_xy.png',
-              './art/ui/mesh_editor/meshes_hilite.png',
-              './art/ui/mesh_editor/rotate.png',
-              './art/ui/mesh_editor/mirror_xy_hilite.png',
-              './art/ui/mesh_editor/pre_translate.png',
-              './art/ui/mesh_editor/rotate_hilite.png',
-              './art/ui/mesh_editor/mirror_x.png',
-              './art/ui/mesh_editor/node.png',
-              './art/ui/mesh_editor/mirror_y.png',
-              './art/ui/mesh_editor/mirror_x_hilite.png',
-              './art/ui/mesh_editor/cross.png',
-              './art/ui/mesh_editor/profile.png',
-              './art/ui/mesh_editor/meshes.png',
-              './art/ui/mesh_editor/node_hilite.png',
-              './art/ui/mesh_editor/mirror_none.png',
-              './art/ui/mesh_editor/pre_translate_hilite.png',
-              './art/ui/towers/shockwave.png',
-              './art/ui/towers/freeze.png',
-              './art/ui/towers/laser.png',
-              './art/ui/towers/electric.png',
-              './art/ui/towers/flame.png',
-              './art/ui/towers/cannon.png',
-              './art/ui/towers/flak.png',
-              './art/ui/towers/acid.png',
-              './art/ui/tower_actions/check.png',
-              './art/ui/tower_actions/cancel.png',
-              './art/ui/tower_actions/upgrade.png',
-              './art/ui/tower_actions/trash.png',
-              './art/textures/particle_solid_01.png',
-              './art/textures/grid.png',
-              './art/textures/particle_smoke_01.png',
-              './art/textures/back_grid.png',
-              './art/textures/skybox_09.png',
-              './art/textures/spacebox_03.png',
-              './art/textures/spacebox_02.png',
-              './art/textures/shadow.png',
-              './art/app_icons/icon-192.png',
-              './art/app_icons/icon-512.png',
-              './index.html'
-            ]).then(function() {
-                self.skipWaiting();
-            });
-        })
-    );
+  e.waitUntil(
+    caches.open(cacheName).then(function(cache) {
+      return cache.addAll([
+        './assets/app_icons/favicon-16x16.png',
+        './assets/app_icons/mstile-310x310.png',
+        './assets/app_icons/mstile-144x144.png',
+        './assets/app_icons/safari-pinned-tab.svg',
+        './assets/app_icons/favicon.ico',
+        './assets/app_icons/android-chrome-192x192.png',
+        './assets/app_icons/apple-touch-icon.png',
+        './assets/app_icons/mstile-70x70.png',
+        './assets/app_icons/mstile-310x150.png',
+        './assets/app_icons/android-chrome-512x512.png',
+        './assets/app_icons/site.webmanifest',
+        './assets/app_icons/mstile-150x150.png',
+        './assets/app_icons/browserconfig.xml',
+        './assets/app_icons/favicon-32x32.png',
+        './assets/audio/daemon-portal-30secs.ogg',
+        './assets/audio/daemon-portal-30secs.mp3',
+        './assets/fonts/Aero.ttf',
+        './assets/fonts/leaguegothic-regular-webfont.ttf',
+        './assets/textures/particle_solid_01.png',
+        './assets/textures/skybox_09.png',
+        './assets/textures/grid.png',
+        './assets/textures/particle_smoke_01.png',
+        './assets/textures/back_grid.png',
+        './assets/textures/spacebox_03.png',
+        './assets/textures/spacebox_02.png',
+        './assets/textures/shadow.png',
+        './assets/ui/map_editor/td_maps_hilite.png',
+        './assets/ui/map_editor/erase_tile_hilite.png',
+        './assets/ui/map_editor/td_maps.png',
+        './assets/ui/map_editor/save_hilite.png',
+        './assets/ui/map_editor/erase_tile.png',
+        './assets/ui/map_editor/save.png',
+        './assets/ui/mesh_editor/scale.png',
+        './assets/ui/mesh_editor/profile_hilite.png',
+        './assets/ui/mesh_editor/scale_hilite.png',
+        './assets/ui/mesh_editor/mirror_none_hilite.png',
+        './assets/ui/mesh_editor/mirror_y_hilite.png',
+        './assets/ui/mesh_editor/cross_hilite.png',
+        './assets/ui/mesh_editor/mirror_xy.png',
+        './assets/ui/mesh_editor/meshes_hilite.png',
+        './assets/ui/mesh_editor/rotate.png',
+        './assets/ui/mesh_editor/mirror_xy_hilite.png',
+        './assets/ui/mesh_editor/pre_translate.png',
+        './assets/ui/mesh_editor/rotate_hilite.png',
+        './assets/ui/mesh_editor/mirror_x.png',
+        './assets/ui/mesh_editor/node.png',
+        './assets/ui/mesh_editor/mirror_y.png',
+        './assets/ui/mesh_editor/mirror_x_hilite.png',
+        './assets/ui/mesh_editor/cross.png',
+        './assets/ui/mesh_editor/grid_back.png',
+        './assets/ui/mesh_editor/profile.png',
+        './assets/ui/mesh_editor/grid_left.png',
+        './assets/ui/mesh_editor/grid_front.png',
+        './assets/ui/mesh_editor/grid_right.png',
+        './assets/ui/mesh_editor/meshes.png',
+        './assets/ui/mesh_editor/node_hilite.png',
+        './assets/ui/mesh_editor/mirror_none.png',
+        './assets/ui/mesh_editor/pre_translate_hilite.png',
+        './assets/ui/pieces/piece_spawn_hilite.png',
+        './assets/ui/pieces/piece_tile.png',
+        './assets/ui/pieces/piece_socket_hilite.png',
+        './assets/ui/pieces/piece_curve_2_hilite.png',
+        './assets/ui/pieces/piece_base_hilite.png',
+        './assets/ui/pieces/piece_curve_2.png',
+        './assets/ui/pieces/piece_curve_3.png',
+        './assets/ui/pieces/piece_curve_1.png',
+        './assets/ui/pieces/piece_curve_3_hilite.png',
+        './assets/ui/pieces/piece_spawn.png',
+        './assets/ui/pieces/piece_base.png',
+        './assets/ui/pieces/piece_curve_1_hilite.png',
+        './assets/ui/pieces/piece_tile_hilite.png',
+        './assets/ui/pieces/piece_socket.png',
+        './assets/ui/settings/sound_on_hilite.png',
+        './assets/ui/settings/sound_off.png',
+        './assets/ui/settings/Settings_button.png',
+        './assets/ui/settings/sound_off_hilite.png',
+        './assets/ui/settings/sound_on.png',
+        './assets/ui/titles/sds_logo_black.png',
+        './assets/ui/titles/REclaimer.png',
+        './assets/ui/titles/sds_logo_edge.png',
+        './assets/ui/titles/sds_logo.png',
+        './assets/ui/tower_actions/check.png',
+        './assets/ui/tower_actions/cancel.png',
+        './assets/ui/tower_actions/upgrade.png',
+        './assets/ui/tower_actions/trash.png',
+        './assets/ui/towers/shockwave.png',
+        './assets/ui/towers/freeze.png',
+        './assets/ui/towers/laser.png',
+        './assets/ui/towers/electric.png',
+        './assets/ui/towers/flame.png',
+        './assets/ui/towers/cannon.png',
+        './assets/ui/towers/flak.png',
+        './assets/ui/towers/acid.png'
+      ]).then(function() {
+        self.skipWaiting();
+      });
+    })
+  );
 });
 
-// when the browser fetches a URL…
+// when the browser fetches a URL...
 self.addEventListener('fetch', function(event) {
-    // … either respond with the cached object or go ahead and fetch the actual URL
-    event.respondWith(
-        caches.match(event.request).then(function(response) {
-            if (response) {
-                // retrieve from cache
-                return response;
-            }
-            // fetch as normal
-            return fetch(event.request);
-        })
-    );
+  // ... either respond with the cached object or go ahead and fetch the actual URL
+  event.respondWith(
+    caches.match(event.request).then(function(response) {
+      if (response) {
+        // retrieve from cache
+        return response;
+      }
+      // fetch as normal
+      return fetch(event.request);
+    })
+  );
 });
