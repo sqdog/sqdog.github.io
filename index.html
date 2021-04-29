@@ -87,15 +87,16 @@
             font-size:22px;
             color: BLACK;
         }
-        .iconsmall {
+        .sqdgIcon {
             width:80px;
             height:80px;
         }
-        .gameIconSize {
+        .gameIcon {
             width:128px;
             height:128px;
+            border-radius: 16px;
         }
-        .mantaIconSize {
+        .mantaIcon {
             width:96px;
             height:96px;
         }
@@ -107,7 +108,7 @@
 <!-- Comment -->
 <body>
     <div class="titlebar">
-        <img src="images/sds_logo_edge.png" class="iconsmall">
+        <img src="images/sds_logo_edge.png" class="sqdgIcon">
         <div class="titletext">
             <div class="name">SquareDog</div>
             <div class="name">Studios</div>
@@ -128,15 +129,29 @@
 
     <div class="appbar">
         <div class="appicon">
+            <a href="games/MeshEditor/webapp">
+                <img src="images/mesh_edit_icon.png" class="gameIcon">
+                <div class="appname">Mesh</div>
+                <div class="appname">editor</div>
+            </a>
+        </div>
+        <div class="appicon">
+            <a href="games/Tapestry/webapp">
+                <img src="images/tapestry_icon.png" class="gameIcon">
+                <div class="appname">Tapestry</div>
+                <div class="appname">of Stars</div>
+            </a>
+        </div>
+        <div class="appicon">
             <a href="games/GaCl/gacl.html">
-                <img src="images/galactic_clicker_icon.png" class="gameIconSize">
+                <img src="images/galactic_clicker_icon.png" class="gameIcon">
                 <div class="appname">Galactic</div>
                 <div class="appname">clicker</div>
             </a>
         </div>
         <div class="appicon">
             <a href="games/REclaimer/webapp">
-                <img src="images/REclaimer_icon.png" class="gameIconSize">
+                <img src="images/REclaimer_icon.png" class="gameIcon">
                 <div class="appname">REclaimer</div>
             </a>
         </div>
@@ -145,7 +160,7 @@
     <div style="padding: 10px;"></div>
 
     <div class="mantabar">
-        <img src="images/manta_engine_rect.png" class="mantaIconSize">
+        <img src="images/manta_engine_rect.png" class="mantaIcon">
         <div style="padding: 10px;"></div>
         <div class="mantadesc">
             The Manta Engine is a webgl progressive web app engine that allows users to install games 
