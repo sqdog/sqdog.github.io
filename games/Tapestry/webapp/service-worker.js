@@ -1,5 +1,5 @@
 // Service-work cache name
-var cacheName = '2021_04_29__00_57:static';
+var cacheName = '2021_05_03__15_38:static';
 
 // Cache assets on install
 self.addEventListener('install', function(e) {
@@ -23,7 +23,8 @@ self.addEventListener('install', function(e) {
         './assets/audio\daemon-portal-30secs.mp3',
         './assets/audio\daemon-portal-30secs.ogg',
         './assets/fonts\Aero.ttf',
-        './assets/fonts\leaguegothic-regular-webfont.ttf',
+        './assets/fonts\Armwarmer.ttf',
+        './assets/fonts\leaguegothic.ttf',
         './assets/textures\back_grid.png',
         './assets/textures\grid.png',
         './assets/textures\particle_smoke_01.png',
