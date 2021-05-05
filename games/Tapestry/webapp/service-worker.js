@@ -1,5 +1,5 @@
 // Service-work cache name
-var cacheName = '2021_05_03__15_38:static';
+var cacheName = '2021_05_05__01_05:static';
 
 // Cache assets on install
 self.addEventListener('install', function(e) {
@@ -33,6 +33,22 @@ self.addEventListener('install', function(e) {
         './assets/textures\skybox_09.png',
         './assets/textures\spacebox_02.png',
         './assets/textures\spacebox_03.png',
+        './assets/textures\planets\moon_01.png',
+        './assets/textures\planets\moon_02.png',
+        './assets/textures\planets\moon_03.png',
+        './assets/textures\planets\moon_04.png',
+        './assets/textures\planets\moon_05.png',
+        './assets/textures\planets\pl_gas_01.png',
+        './assets/textures\planets\pl_gas_02.png',
+        './assets/textures\planets\pl_gas_03.png',
+        './assets/textures\planets\pl_rock_01.png',
+        './assets/textures\planets\pl_rock_02.png',
+        './assets/textures\planets\pl_rock_03.png',
+        './assets/textures\planets\pl_rock_04.png',
+        './assets/textures\planets\pl_rock_05.png',
+        './assets/textures\planets\pl_rock_06.png',
+        './assets/textures\planets\pl_rock_07.png',
+        './assets/textures\planets\sun_01.png',
         './assets/ui\map_editor\erase_tile.png',
         './assets/ui\map_editor\erase_tile_hilite.png',
         './assets/ui\map_editor\save.png',
@@ -84,10 +100,10 @@ self.addEventListener('install', function(e) {
         './assets/ui\settings\sound_off_hilite.png',
         './assets/ui\settings\sound_on.png',
         './assets/ui\settings\sound_on_hilite.png',
-        './assets/ui\titles\REclaimer.png',
-        './assets/ui\titles\sds_logo.png',
-        './assets/ui\titles\sds_logo_black.png',
+        './assets/ui\titles\manta_engine.png',
         './assets/ui\titles\sds_logo_edge.png',
+        './assets/ui\titles\tapestry.png',
+        './assets/ui\titles\tapestry_title.png',
         './assets/ui\tower_actions\cancel.png',
         './assets/ui\tower_actions\check.png',
         './assets/ui\tower_actions\trash.png',
