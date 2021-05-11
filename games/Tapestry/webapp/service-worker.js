@@ -1,5 +1,5 @@
 // Service-work cache name
-var cacheName = '2021_05_06__01_27:static';
+var cacheName = '2021_05_11__11_14:static';
 
 // Cache assets on install
 self.addEventListener('install', function(e) {
@@ -25,6 +25,7 @@ self.addEventListener('install', function(e) {
         './assets/fonts\Aero.ttf',
         './assets/fonts\Armwarmer.ttf',
         './assets/fonts\leaguegothic.ttf',
+        './assets/textures\Asteroid01.png',
         './assets/textures\back_grid.png',
         './assets/textures\glow.png',
         './assets/textures\grid.png',
