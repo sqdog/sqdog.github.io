@@ -1,5 +1,5 @@
 // Service-work cache name
-var cacheName = '2021_06_02__10_10:static';
+var cacheName = '2021_06_02__10_17:static';
 
 // Cache assets on install
 self.addEventListener('install', function(e) {
