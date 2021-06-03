@@ -1,5 +1,5 @@
 // Service-work cache name
-var cacheName = '2021_06_02__10_17:static';
+var cacheName = '2021_06_03__16_28:static';
 
 // Cache assets on install
 self.addEventListener('install', function(e) {
@@ -13,13 +13,8 @@ self.addEventListener('install', function(e) {
         './assets/app_icons\favicon-16x16.png',
         './assets/app_icons\favicon-32x32.png',
         './assets/app_icons\favicon.ico',
-        './assets/app_icons\mstile-144x144.png',
         './assets/app_icons\mstile-150x150.png',
-        './assets/app_icons\mstile-310x150.png',
-        './assets/app_icons\mstile-310x310.png',
-        './assets/app_icons\mstile-70x70.png',
         './assets/app_icons\safari-pinned-tab.svg',
-        './assets/app_icons\site.webmanifest',
         './assets/audio\daemon-portal-30secs.mp3',
         './assets/audio\daemon-portal-30secs.ogg',
         './assets/fonts\Aero.ttf',
