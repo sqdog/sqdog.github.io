@@ -1,5 +1,5 @@
 // Service-work cache name
-var cacheName = '2021_06_10__01_23:static';
+var cacheName = '2021_07_06__01_16:static';
 
 // Cache assets on install
 self.addEventListener('install', function(e) {
@@ -74,9 +74,23 @@ self.addEventListener('install', function(e) {
         './assets/textures\planets\pl_sol_saturn.png',
         './assets/textures\planets\pl_sol_uranus.png',
         './assets/textures\planets\pl_sol_venus.png',
-        './assets/textures\planets\saturnringcolor.jpg',
         './assets/textures\planets\sun_01.png',
-        './assets/textures\planets\uranusringcolour.jpg',
+        './assets/textures\rings\rng_01.png',
+        './assets/textures\rings\rng_02.png',
+        './assets/textures\rings\rng_03.png',
+        './assets/textures\rings\rng_04.png',
+        './assets/textures\rings\rng_05.png',
+        './assets/textures\rings\rng_06.png',
+        './assets/textures\rings\rng_sol_saturn.png',
+        './assets/textures\rings\rng_sol_uranus.png',
+        './assets/ui\controls\body_view.png',
+        './assets/ui\controls\body_view_hilite.png',
+        './assets/ui\controls\sector_view.png',
+        './assets/ui\controls\sector_view_hilite.png',
+        './assets/ui\controls\system_view.png',
+        './assets/ui\controls\system_view_hilite.png',
+        './assets/ui\controls\zoom.png',
+        './assets/ui\controls\zoom_hilite.png',
         './assets/ui\settings\Settings_button.png',
         './assets/ui\settings\sound_off.png',
         './assets/ui\settings\sound_off_hilite.png',
