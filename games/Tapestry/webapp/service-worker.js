@@ -1,5 +1,5 @@
 // Service-work cache name
-var cacheName = '2021_07_06__01_16:static';
+var cacheName = '2021_08_10__23_24:static';
 
 // Cache assets on install
 self.addEventListener('install', function(e) {
@@ -17,6 +17,8 @@ self.addEventListener('install', function(e) {
         './assets/app_icons\safari-pinned-tab.svg',
         './assets/audio\daemon-portal-30secs.mp3',
         './assets/audio\daemon-portal-30secs.ogg',
+        './assets/backgrounds\graph_paper.png',
+        './assets/backgrounds\grid.png',
         './assets/fonts\Aero.ttf',
         './assets/fonts\Armwarmer.ttf',
         './assets/fonts\leaguegothic.ttf',
@@ -85,6 +87,12 @@ self.addEventListener('install', function(e) {
         './assets/textures\rings\rng_sol_uranus.png',
         './assets/ui\controls\body_view.png',
         './assets/ui\controls\body_view_hilite.png',
+        './assets/ui\controls\construction_ship.png',
+        './assets/ui\controls\construction_ship_hilite.png',
+        './assets/ui\controls\defense_ship.png',
+        './assets/ui\controls\defense_ship_hilite.png',
+        './assets/ui\controls\mining_ship.png',
+        './assets/ui\controls\mining_ship_hilite.png',
         './assets/ui\controls\sector_view.png',
         './assets/ui\controls\sector_view_hilite.png',
         './assets/ui\controls\system_view.png',
@@ -106,7 +114,11 @@ self.addEventListener('install', function(e) {
         './assets/ui\titles\manta_engine.png',
         './assets/ui\titles\sds_logo.png',
         './assets/ui\titles\tapestry.png',
-        './assets/ui\titles\tapestry_title.png'
+        './assets/ui\titles\tapestry_title.png',
+        './assets/ui\upgrades\lunar_mining.png',
+        './assets/ui\upgrades\moon_base.png',
+        './assets/ui\upgrades\space_elevator.png',
+        './assets/ui\upgrades\upgrade_hilite.png'
       ]).then(function() {
         self.skipWaiting();
       });
