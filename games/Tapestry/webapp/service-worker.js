@@ -1,5 +1,5 @@
 // Service-work cache name
-var cacheName = '2021_09_04__11_28:static';
+var cacheName = '2021_09_05__01_17:static';
 
 // Cache assets on install
 self.addEventListener('install', function(e) {
@@ -107,11 +107,15 @@ self.addEventListener('install', function(e) {
         './assets/ui\settings\sound_off_hilite.png',
         './assets/ui\settings\sound_on.png',
         './assets/ui\settings\sound_on_hilite.png',
+        './assets/ui\stats\arrow.png',
+        './assets/ui\stats\con_ship.png',
         './assets/ui\stats\cost.png',
+        './assets/ui\stats\def_ship.png',
         './assets/ui\stats\energy.png',
         './assets/ui\stats\exotic.png',
         './assets/ui\stats\helix.png',
         './assets/ui\stats\metal.png',
+        './assets/ui\stats\min_ship.png',
         './assets/ui\stats\population.png',
         './assets/ui\stats\requirement.png',
         './assets/ui\stats\result.png',
