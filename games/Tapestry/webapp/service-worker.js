@@ -1,5 +1,5 @@
 // Service-work cache name
-var cacheName = '2021_09_06__13_20:static';
+var cacheName = '2021_09_17__23_50:static';
 
 // Cache assets on install
 self.addEventListener('install', function(e) {
@@ -102,24 +102,31 @@ self.addEventListener('install', function(e) {
         './assets/ui\controls\system_view_hilite.png',
         './assets/ui\controls\zoom.png',
         './assets/ui\controls\zoom_hilite.png',
+        './assets/ui\info\arrow.png',
+        './assets/ui\info\cancel.png',
+        './assets/ui\info\cancel_hilite.png',
+        './assets/ui\info\cost.png',
+        './assets/ui\info\info.png',
+        './assets/ui\info\info_hilite.png',
+        './assets/ui\info\requirement.png',
+        './assets/ui\info\result.png',
+        './assets/ui\info\upgrade.png',
+        './assets/ui\info\upgrade_hilite.png',
         './assets/ui\settings\Settings_button.png',
         './assets/ui\settings\sound_off.png',
         './assets/ui\settings\sound_off_hilite.png',
         './assets/ui\settings\sound_on.png',
         './assets/ui\settings\sound_on_hilite.png',
-        './assets/ui\stats\arrow.png',
+        './assets/ui\stats\biomatter.png',
         './assets/ui\stats\con_ship.png',
-        './assets/ui\stats\cost.png',
         './assets/ui\stats\def_ship.png',
         './assets/ui\stats\energy.png',
         './assets/ui\stats\exotic.png',
-        './assets/ui\stats\helix.png',
         './assets/ui\stats\metal.png',
         './assets/ui\stats\min_ship.png',
         './assets/ui\stats\population.png',
-        './assets/ui\stats\requirement.png',
-        './assets/ui\stats\result.png',
         './assets/ui\stats\silica.png',
+        './assets/ui\stats\time.png',
         './assets/ui\stats\tritium.png',
         './assets/ui\titles\manta_engine.png',
         './assets/ui\titles\sds_logo.png',
