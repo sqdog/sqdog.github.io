@@ -1,5 +1,5 @@
 // Service-work cache name
-var cacheName = '2021_09_17__23_50:static';
+var cacheName = '2021_09_29__00_36:static';
 
 // Cache assets on install
 self.addEventListener('install', function(e) {
@@ -108,6 +108,8 @@ self.addEventListener('install', function(e) {
         './assets/ui\info\cost.png',
         './assets/ui\info\info.png',
         './assets/ui\info\info_hilite.png',
+        './assets/ui\info\not_cost.png',
+        './assets/ui\info\not_requirement.png',
         './assets/ui\info\requirement.png',
         './assets/ui\info\result.png',
         './assets/ui\info\upgrade.png',
