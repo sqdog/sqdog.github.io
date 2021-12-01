@@ -1,0 +1,22 @@
+{
+  "short_name": "Tapestry",
+  "name": "Tapestry of Stars",
+  "icons": [
+    {
+        "src": "./assets/app_icons/android-chrome-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+    },
+    {
+      "src": "./assets/app_icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "background_color": "#e05a47",
+  "theme_color": "#e05a47",
+  "display": "fullscreen",
+  "orientation": "portait"
+}
+
